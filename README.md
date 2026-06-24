@@ -50,9 +50,9 @@ proxychains4 wget https://xxx
 环境变量污染：
 
 ```bash
-http_proxy=socks5h://192.168.5.93:15732
-https_proxy=socks5h://192.168.5.93:15732
-ALL_PROXY=socks5h://192.168.5.93:15732
+http_proxy=socks5h://192.168.x.xx:xxxx
+https_proxy=socks5h://192.168.x.xx:xxxx
+ALL_PROXY=socks5h://192.168.x.xx:xxxx
 ```
 
 wget 不支持 `socks5h://`，会自己解析失败。
@@ -136,7 +136,7 @@ dynamic_chain
 
 ```ini
 [ProxyList]
-socks5 192.168.5.93 15732
+socks5 192.168.x.xx:xxxx
 ```
 
 ---
@@ -304,7 +304,7 @@ Ubuntu
   ↓
 proxychains4（劫持 socket）
   ↓
-SOCKS5代理（192.168.5.93:15732）
+SOCKS5代理（192.168.x.xx:xxxx）
   ↓
 外网（GitHub / HF / pip）
 ```
